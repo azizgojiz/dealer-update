@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Workspace update order untuk client J, H, dan Y.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Dealer Update</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d2036'/%3E%3Cpath d='M8 10h16M8 16h11M8 22h16' stroke='%2345d4ac' stroke-width='3'/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light;--navy:#0d2036;--ink:#172d44;--muted:#566a7e;--line:#d9e2eb;--green:#096952;--bg:#eef3f8}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:1px solid var(--line);background:white;color:var(--ink);padding:.65rem 1rem;border-radius:7px;font-weight:600}button:hover{background:#eaf0f6}button:disabled{cursor:not-allowed;opacity:.5}button.primary{background:var(--green);border-color:var(--green);color:white}button.primary:hover{background:#07533f}:focus-visible{outline:3px solid #3297ff;outline-offset:3px}header{background:var(--navy);color:#fff;padding:1.1rem max(24px,calc((100vw - 1200px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:1.3rem;font-weight:720;letter-spacing:-.04em}.brand span{color:#45d4ac}.privacy{font-size:.875rem;color:#c4d6e4}main{max-width:1248px;margin:auto;padding:28px 24px 36px}.intro{display:flex;align-items:flex-end;justify-content:flex-end;gap:16px;margin-bottom:12px}h1{margin:0;font-size:1.75rem;letter-spacing:-.04em}p{margin:.4rem 0 0}.muted{color:var(--muted)}.shortcut{font-size:.875rem;color:var(--muted)}kbd{display:inline-block;border:1px solid #bbc9d7;background:white;border-radius:4px;padding:0 5px;font-size:.8125rem}.mix-inputs .panel+.panel{margin-top:20px}.workspace{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}.panel{background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 4px 14px #15344d06}.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;border-bottom:1px solid var(--line)}h2{font-size:1rem;margin:0}.step{display:inline-grid;place-items:center;width:24px;height:24px;background:#e9eff6;border-radius:5px;margin-right:9px;font-size:.875rem}.actions{display:flex;gap:8px;flex-wrap:wrap}.small{font-size:.875rem;padding:.45rem .7rem}.body{padding:20px}label{font-size:.875rem;font-weight:600;display:block;margin-bottom:8px}textarea{width:100%;resize:vertical;border:1px solid #bac9d8;border-radius:7px;background:#f9fbfd;color:var(--ink);padding:14px;font:14px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;tab-size:4;min-height:260px}textarea::placeholder{color:#657c91}.help{font-size:.875rem;color:var(--muted);margin-top:9px}.notice{margin-top:16px;padding:12px 14px;border-radius:7px;background:#f2f6fa;font-size:.875rem;white-space:pre-line}.notice.error{background:#fff0ee;color:#a1271a;border:1px solid #f2c8c2}.notice.ok{background:#eaf7f1;color:#076148}.notice.warn{background:#fff6df;color:#774d00;border:1px solid #efdca6}.group{margin-bottom:18px}.group select{width:100%;padding:10px;border:1px solid #bac9d8;border-radius:7px;background:white}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;border:1px solid var(--line);background:var(--line);border-radius:8px;overflow:hidden;margin-bottom:18px}.stat{background:#f6f9fc;padding:13px 12px;min-width:0}.stat span{font-size:.8125rem;color:var(--muted);display:block}.stat strong{display:block;font-size:1.35rem;overflow-wrap:anywhere}.stat small{font-size:.75rem;font-weight:400}.status{display:inline-block;background:#e9eff6;padding:3px 9px;font-size:.8125rem;border-radius:5px;color:#3d576f}.output{background:var(--navy);color:#f0f8ff;min-height:260px;padding:18px;font-size:16px;line-height:1.8;border-color:var(--navy)}.output{resize:none;overflow:hidden}.output::placeholder{color:#91a8bb}.output:disabled{opacity:1}.copyrow .actions{margin-left:auto}.copyrow{flex-wrap:wrap;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px}.copyrow button{min-width:150px}.live{font-size:.875rem;color:var(--green);min-height:21px}.avg{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}.avg input[type=text]{width:100%;padding:10px 12px;border:1px solid #bac9d8;border-radius:7px}.check{display:flex;gap:9px;align-items:flex-start;margin:12px 0 0;font-weight:400}.check input{margin-top:4px;width:17px;height:17px;flex-shrink:0;accent-color:var(--green)}details{margin-top:18px}summary{cursor:pointer;font-size:.875rem;font-weight:600}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:.875rem;margin-top:12px}th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}th:first-child,td:first-child{text-align:left}th{color:var(--muted);font-weight:600}.foot{margin-top:22px;font-size:.875rem;color:var(--muted)}.foot strong{color:var(--ink)}[hidden]{display:none!important}@media(max-width:850px){.workspace{grid-template-columns:1fr}.intro{display:none}.shortcut{display:none}header{padding:16px 20px}main{padding:22px 16px}.privacy{max-width:170px;text-align:right}.bar,.body{padding:16px}}@media(prefers-reduced-motion:no-preference){button{transition:background .15s}}
+
+:root{color-scheme:light;--navy:#0d2036;--ink:#172d44;--muted:#566a7e;--line:#d9e2eb;--green:#096952;--bg:#eef3f8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}button{font:inherit;cursor:pointer}header{background:var(--navy);color:#fff;padding:1.1rem max(24px,calc((100vw - 1200px)/2))}.brand{font-size:1.3rem;font-weight:720;letter-spacing:-.04em}.brand span{color:#45d4ac}main{max-width:1248px;margin:auto;padding:28px 24px 36px}.client-label{font-size:.875rem;color:var(--muted);font-weight:600;margin:0 0 10px}.client-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.client-tab{min-width:88px;padding:12px 28px;border:1px solid #bbcbd9;border-radius:8px;background:white;color:var(--ink);font-weight:700;font-size:1.1rem}.client-tab:hover{background:#e1ebf5}.client-tab[aria-selected=true]{background:var(--navy);color:white;border-color:var(--navy)}.client-panel{background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 4px 14px #15344d06}.type-tabs{display:flex;gap:24px;padding:0 24px;border-bottom:1px solid var(--line);flex-wrap:wrap}.type-tab{background:transparent;border:0;border-bottom:3px solid transparent;border-radius:0;color:var(--muted);padding:18px 8px 15px;font-weight:600;font-size:1rem}.type-tab:hover{color:var(--ink);background:#f6f9fc}.type-tab[aria-selected=true]{border-bottom-color:var(--green);color:var(--green)}.order-panel{min-height:440px;padding:24px}.client-tab:focus-visible,.type-tab:focus-visible{outline:3px solid #3297ff;outline-offset:3px}.order-panel:focus-visible{outline:3px solid #3297ff;outline-offset:-4px}[hidden]{display:none!important}@media(max-width:600px){header{padding:16px 20px}main{padding:22px 16px}.client-tab{min-width:80px;padding:10px 24px}.type-tabs{gap:16px;padding:0 16px}.order-panel{min-height:360px;padding:16px}}@media(prefers-reduced-motion:no-preference){button{transition:background .15s,color .15s}}
+</style>
+</head>
+<body>
+<header><div class="brand">Dealer<span> / </span>Update</div></header>
+<main>
+<p class="client-label" id="clients-label">Client</p>
+<div class="client-tabs" role="tablist" aria-labelledby="clients-label" id="client-tabs">
+<button class="client-tab" role="tab" id="client-J" data-client="J" aria-controls="client-panel-J" aria-selected="true" tabindex="0">J</button>
+<button class="client-tab" role="tab" id="client-H" data-client="H" aria-controls="client-panel-H" aria-selected="false" tabindex="-1">H</button>
+</div>
+<section class="client-panel" role="tabpanel" id="client-panel-J" aria-labelledby="client-J">
+<div class="type-tabs" role="tablist" aria-label="Tipe order client J" data-client="J">
+<button class="type-tab" role="tab" id="type-J-Spot" data-type="Spot" aria-controls="order-J-Spot" aria-selected="true" tabindex="0">Spot</button>
+<button class="type-tab" role="tab" id="type-J-OB" data-type="OB" aria-controls="order-J-OB" aria-selected="false" tabindex="-1">OB/CD</button>
+</div>
+<div class="order-panel" role="tabpanel" id="order-J-Spot" aria-labelledby="type-J-Spot" tabindex="0">
+<div class="intro"><div class="shortcut"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> untuk copy hasil</div></div>
+<div class="workspace">
+<section class="panel"><div class="bar"><h2><span class="step">1</span>Data dari sistem</h2><div class="actions"><button id="clear" class="small">Bersihkan</button></div></div><div class="body">
+<textarea id="source" aria-label="Data order dari sistem" spellcheck="false" autofocus placeholder="Paste tabel lengkap beserta nama kolom di sini. Urutan kolom boleh berbeda."></textarea>
+<div id="parseMessage" class="notice" hidden role="status" aria-live="polite"></div>
+<details id="detail" hidden><summary id="detailTitle">Rincian baris terbaca</summary><div class="tablewrap"><table><thead><tr><th>Ticker</th><th>Side</th><th>Status</th><th>Harga order</th><th>Avg Px</th><th>Qty awal / lot</th><th>Exec / lot</th><th>Open / lot</th></tr></thead><tbody id="rows"></tbody></table></div></details>
+</div></section>
+<section class="panel"><div class="bar"><h2><span class="step">2</span>Update WhatsApp</h2><span id="status" class="status">Belum ada data</span></div><div class="body">
+<div id="groupBox" class="group" hidden><label for="group">Pilih ticker dan sisi order</label><select id="group"><option value="__all__" selected>Show all</option></select></div>
+<div class="stats"><div class="stat"><span>Executed + Open</span><strong id="total">—</strong></div><div class="stat"><span>Executed</span><strong id="filled">—</strong></div><div class="stat"><span>Open</span><strong id="open">—</strong></div></div>
+<textarea id="output" aria-label="Update WhatsApp" class="output" readonly spellcheck="false" placeholder="Update akan muncul setelah data terbaca."></textarea>
+<div class="copyrow"><span id="copyMessage" class="live" role="status" aria-live="polite"></span><div class="actions"><button id="exportJSpot" disabled>Export Excel</button><button id="copy" class="primary" disabled>Copy update</button></div></div>
+<div id="avgBox" class="avg" hidden><label for="actualAvg">Average eksekusi aktual (opsional)</label><input id="actualAvg" type="text" inputmode="decimal" placeholder="Contoh: 6616.0446" autocomplete="off"><label class="check"><input id="usePx" type="checkbox"><span>Semua eksekusi terjadi tepat di harga order (Px).</span></label><p class="help">Px adalah harga order. Masukkan average aktual, gunakan kolom Avg Px dari sistem, atau konfirmasi pernyataan di atas.</p></div>
+<div id="fillCheckBox" class="notice warn" hidden><label class="check"><input id="independentFills" type="checkbox"><span>Exec. Qty setiap baris berdiri sendiri, tanpa fill lama yang terbawa ke order pengganti.</span></label></div>
+<div id="avgMessage" class="notice warn" hidden role="status"></div>
+</div></section>
+</div>
+</div>
+<div class="order-panel" role="tabpanel" id="order-J-OB" aria-labelledby="type-J-OB" tabindex="0" hidden>
+<div class="intro"><div class="shortcut"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> untuk copy hasil</div></div>
+<div class="workspace">
+<section class="panel"><div class="bar"><h2><span class="step">1</span>Data dari sistem</h2><button id="obClear" class="small">Bersihkan</button></div><div class="body">
+<textarea id="obSource" aria-label="Data order J OB atau CD" spellcheck="false" placeholder="Paste tabel lengkap beserta nama kolom di sini. Urutan kolom boleh berbeda."></textarea>
+<div id="obParseMessage" class="notice error" hidden role="status" aria-live="polite"></div>
+</div></section>
+<section class="panel"><div class="bar"><h2><span class="step">2</span>Update WhatsApp</h2><span id="obStatus" class="status">Belum ada data</span></div><div class="body">
+<div id="obOrderBox" class="group" hidden><label for="obOrder">Pilih order</label><select id="obOrder"><option value="__all__">Show all</option></select></div>
+<div class="stats"><div class="stat"><span>Total order</span><strong id="obTotal">—</strong></div><div class="stat"><span>Executed</span><strong id="obFilled">—</strong></div><div class="stat"><span>Avg Px</span><strong id="obAverage">—</strong></div></div>
+<textarea id="obOutput" aria-label="Update WhatsApp J OB atau CD" class="output" readonly spellcheck="false" placeholder="Update akan muncul setelah data terbaca."></textarea>
+<div class="copyrow"><span id="obCopyMessage" class="live" role="status" aria-live="polite"></span><div class="actions"><button id="exportJOb" disabled>Export Excel</button><button id="obCopy" class="primary" disabled>Copy update</button></div></div>
+</div></section>
+</div>
+</div>
+</section>
+<section class="client-panel" role="tabpanel" id="client-panel-H" aria-labelledby="client-H" hidden>
+<div class="type-tabs" role="tablist" aria-label="Tipe order client H" data-client="H">
+<button class="type-tab" role="tab" id="type-H-Spot" data-type="Spot" aria-controls="order-H-Spot" aria-selected="true" tabindex="0">Spot</button>
+<button class="type-tab" role="tab" id="type-H-OB" data-type="OB" aria-controls="order-H-OB" aria-selected="false" tabindex="-1">CD/OB</button>
+<button class="type-tab" role="tab" id="type-H-Mix" data-type="Mix" aria-controls="order-H-Mix" aria-selected="false" tabindex="-1">Mix</button>
+</div>
+<div class="order-panel" role="tabpanel" id="order-H-Spot" aria-labelledby="type-H-Spot" tabindex="0">
+<div class="intro"><div class="shortcut"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> untuk copy hasil</div></div>
+<div class="workspace">
+<section class="panel"><div class="bar"><h2><span class="step">1</span>Data dari sistem</h2><button id="hSpotClear" class="small">Bersihkan</button></div><div class="body">
+<textarea id="hSpotSource" aria-label="Data order H Spot" spellcheck="false" placeholder="Paste tabel lengkap beserta nama kolom di sini. Urutan kolom boleh berbeda."></textarea>
+<div id="hSpotParseMessage" class="notice error" hidden role="status" aria-live="polite"></div>
+</div></section>
+<section class="panel"><div class="bar"><h2><span class="step">2</span>Update WhatsApp</h2><span id="hSpotStatus" class="status">Belum ada data</span></div><div class="body">
+<div id="hSpotOrderBox" class="group" hidden><label for="hSpotOrder">Pilih ticker dan sisi order</label><select id="hSpotOrder"><option value="__all__">Show all</option></select></div>
+<div class="stats"><div class="stat"><span>Executed</span><strong id="hSpotTotal">—</strong></div><div class="stat"><span>Ticker/sisi</span><strong id="hSpotFilled">—</strong></div><div class="stat"><span>Avg Px</span><strong id="hSpotAverage">—</strong></div></div>
+<textarea id="hSpotOutput" aria-label="Update WhatsApp H Spot" class="output" readonly spellcheck="false" placeholder="Update akan muncul setelah data terbaca."></textarea>
+<div class="copyrow"><span id="hSpotCopyMessage" class="live" role="status" aria-live="polite"></span><div class="actions"><button id="exportHSpot" disabled>Export Excel</button><button id="hSpotCopy" class="primary" disabled>Copy update</button></div></div>
+</div></section>
+</div>
+</div>
+<div class="order-panel" role="tabpanel" id="order-H-OB" aria-labelledby="type-H-OB" tabindex="0" hidden>
+<div class="intro"><div class="shortcut"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> untuk copy hasil</div></div>
+<div class="workspace">
+<section class="panel"><div class="bar"><h2><span class="step">1</span>Data dari sistem</h2><button id="hObClear" class="small">Bersihkan</button></div><div class="body">
+<textarea id="hObSource" aria-label="Data order H CD atau OB" spellcheck="false" placeholder="Paste tabel lengkap beserta nama kolom di sini. Urutan kolom boleh berbeda."></textarea>
+<div id="hObParseMessage" class="notice error" hidden role="status" aria-live="polite"></div>
+</div></section>
+<section class="panel"><div class="bar"><h2><span class="step">2</span>Update WhatsApp</h2><span id="hObStatus" class="status">Belum ada data</span></div><div class="body">
+<div id="hObOrderBox" class="group" hidden><label for="hObOrder">Pilih order</label><select id="hObOrder"><option value="__all__">Show all</option></select></div>
+<div class="stats"><div class="stat"><span>Executed</span><strong id="hObTotal">—</strong></div><div class="stat"><span>% Exec</span><strong id="hObFilled">—</strong></div><div class="stat"><span>Avg Px</span><strong id="hObAverage">—</strong></div></div>
+<textarea id="hObOutput" aria-label="Update WhatsApp H CD atau OB" class="output" readonly spellcheck="false" placeholder="Update akan muncul setelah data terbaca."></textarea>
+<div class="copyrow"><span id="hObCopyMessage" class="live" role="status" aria-live="polite"></span><div class="actions"><button id="exportHOb" disabled>Export Excel</button><button id="hObCopy" class="primary" disabled>Copy update</button></div></div>
+</div></section>
+</div>
+</div>
+<div class="order-panel" role="tabpanel" id="order-H-Mix" aria-labelledby="type-H-Mix" tabindex="0" hidden>
+<div class="intro"><div class="shortcut"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> untuk copy hasil</div></div>
+<div class="workspace">
+<div class="mix-inputs">
+<section class="panel"><div class="bar"><h2><span class="step">1</span>Order book</h2><button id="hMixBookClear" class="small">Bersihkan</button></div><div class="body">
+<textarea id="hMixBookSource" aria-label="Order book H Mix" spellcheck="false" placeholder="Paste tabel lengkap beserta nama kolom di sini. Urutan kolom boleh berbeda."></textarea>
+</div></section>
+<section class="panel"><div class="bar"><h2><span class="step">2</span>Market orders</h2><button id="hMixMarketClear" class="small">Bersihkan</button></div><div class="body">
+<textarea id="hMixMarketSource" aria-label="Market orders H Mix" spellcheck="false" placeholder="Paste tabel lengkap beserta nama kolom di sini. Urutan kolom boleh berbeda."></textarea>
+<div id="hMixParseMessage" class="notice error" hidden role="status" aria-live="polite"></div>
+</div></section>
+</div>
+<section class="panel"><div class="bar"><h2><span class="step">3</span>Update WhatsApp</h2><span id="hMixStatus" class="status">Belum ada data</span></div><div class="body">
+<div id="hMixOrderBox" class="group" hidden><label for="hMixOrder">Pilih ticker dan sisi order</label><select id="hMixOrder"><option value="__all__">Show all</option></select></div>
+<div class="stats"><div class="stat"><span>Executed</span><strong id="hMixTotal">—</strong></div><div class="stat"><span>Ticker/sisi</span><strong id="hMixCount">—</strong></div><div class="stat"><span>Avg Px</span><strong id="hMixAverage">—</strong></div></div>
+<textarea id="hMixOutput" aria-label="Update WhatsApp H Mix" class="output" readonly spellcheck="false" placeholder="Update akan muncul setelah kedua input terbaca."></textarea>
+<div class="copyrow"><span id="hMixCopyMessage" class="live" role="status" aria-live="polite"></span><div class="actions"><button id="exportHMix" disabled>Export Excel</button><button id="hMixCopy" class="primary" disabled>Copy update</button></div></div>
+</div></section>
+</div>
+</div>
+</section>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+function resizeOutput(element){
+ if(!element.offsetWidth)return;
+ element.style.height='auto';
+ element.style.height=(element.scrollHeight+element.offsetHeight-element.clientHeight)+'px';
+}
+function withUpdateHeader(text){return text?'update:\n'+text.replace(/^(?:update[ \t]*:[ \t]*\r?\n)+/i,''):'';}
+function setOutput(id,text){const element=$(id);element.value=withUpdateHeader(text);resizeOutput(element);if(typeof refreshExportButtons==='function')refreshExportButtons();}
+function resizeVisibleOutputs(){document.querySelectorAll('textarea.output').forEach(resizeOutput);}
+let outputResizeFrame;
+window.addEventListener('resize',()=>{cancelAnimationFrame(outputResizeFrame);outputResizeFrame=requestAnimationFrame(resizeVisibleOutputs);});
+if(document.fonts?.ready)document.fonts.ready.then(resizeVisibleOutputs);
+const SAMPLE="ExecStatus\tOrig Time\tSide\tSymbol\tPx\tAvg Px\tQty\tExec. Qty\tLeavesQuantity\tAccount Desc\tClientId\tAccount\nWorking\t13:30:35\tB\tICBP\t6,600\t6,600\t500000\t133400\t366600\tContoh Client\tDEMO\tDEMO\nWorking\t13:39:24\tB\tICBP\t6,625\t6,625\t500000\t239000\t261000\tContoh Client\tDEMO\tDEMO\nWorking\t14:00:53\tB\tICBP\t6,675\t6,675\t200000\t171500\t28500\tContoh Client\tDEMO\tDEMO";
+const norm=s=>s.toLowerCase().replace(/[^a-z0-9]/g,'');
+const aliases={status:['execstatus','status'],time:['origtime','time'],side:['side'],symbol:['symbol','ticker'],px:['px','price','orderprice'],qty:['qty','quantity','orderqty'],exec:['execqty','executedqty','cumqty','executedquantity'],leaves:['leavesquantity','leavesqty','openqty'],account:['account','accountid'],client:['clientid'],desc:['accountdesc'],avg:['avgpx','avgprice','averageprice','executionavgprice','execavgpx'],orderId:['orderid']};
+function cleanNumber(s){s=String(s??'').trim();if(/^\d{1,3}(,\d{3})+(\.\d+)?$/.test(s))return s.replace(/,/g,'');if(/^\d{1,3}(\.\d{3})+(,\d+)?$/.test(s))return s.replace(/\./g,'').replace(',','.');if(/^\d+,\d{1,6}$/.test(s))return s.replace(',','.');return s;}
+function integer(s,name,line){const v=cleanNumber(s);if(!/^\d+$/.test(v)||!Number.isSafeInteger(Number(v)))throw Error(`Baris ${line}: ${name} harus bilangan bulat tidak negatif.`);const n=BigInt(v);if(n%100n!==0n)throw Error(`Baris ${line}: ${name} bukan kelipatan 100 lembar. Lot pecahan belum didukung.`);return n;}
+function price(s,name='Harga',line=''){const v=cleanNumber(s);if(!/^\d+(\.\d{1,6})?$/.test(v)||!Number.isFinite(Number(v))||Number(v)<=0||Number(v)>1e9)throw Error(`${line?'Baris '+line+': ':''}${name} tidak valid. Gunakan angka positif, maksimal 6 desimal.`);const [a,b='']=v.split('.');return BigInt(a)*1000000n+BigInt(b.padEnd(6,'0'));}
+function displayPrice(p){const a=p/1000000n,b=(p%1000000n).toString().padStart(6,'0').replace(/0+$/,'');return a.toString()+(b?'.'+b:'');}
+function avgText(value,quantity){const scaled=(value+quantity*50n)/(quantity*100n);const a=scaled/10000n,b=(scaled%10000n).toString().padStart(4,'0');return a.toString()+(b==='0000'?'':'.'+b);}
+function splitClipboardTsv(text){
+ const records=[];let cols=[],cell='',quoted=false,line=1,rowLine=1;
+ function finishRow(){cols.push(cell);if(cols.some(value=>value.trim()!==''))records.push({cols:cols.map(value=>value.trim()),line:rowLine});cols=[];cell='';rowLine=line+1;}
+ for(let i=0;i<text.length;i++){
+  const char=text[i];
+  if(quoted){
+   if(char==='"'){if(text[i+1]==='"'){cell+='"';i++;}else quoted=false;}
+   else {cell+=char;if(char==='\n')line++;}
+  }else if(char==='"'&&cell==='')quoted=true;
+  else if(char==='\t'){cols.push(cell);cell='';}
+  else if(char==='\n'){finishRow();line++;}
+  else cell+=char;
+ }
+ if(quoted)throw Error(`Baris ${rowLine}: tanda kutip pada sel belum ditutup. Copy ulang tabel lengkap.`);
+ if(cols.length||cell!=='')finishRow();
+ return records;
+}
+function mapOrderHeaders(headers,required,headerAliases=aliases){
+ const names=headers.map(norm),map={};
+ for(const [key,choices] of Object.entries(headerAliases)){
+  // Alias order is deliberate: ExecStatus wins over the workflow column Status.
+  for(const choice of choices){
+   const indices=[];names.forEach((name,i)=>{if(name===choice)indices.push(i);});
+   if(!indices.length)continue;
+   if(indices.length>1)throw Error(`Kolom ${headers[indices[0]]} muncul lebih dari sekali. Copy satu kolom untuk data order ini.`);
+   map[key]=indices[0];break;
+  }
+ }
+ for(const key of required)if(map[key]===undefined)throw Error(`Header tidak memuat kolom ${key}. Sertakan baris nama kolom ketika copy tabel.`);
+ return map;
+}
+function readOrderTable(text,required,fallback,headerAliases=aliases){
+ if(typeof text!=='string'||text.length>2000000)throw Error('Data tidak valid atau terlalu besar. Paste hanya order yang terkait.');
+ text=text.replace(/^\uFEFF/,'').replace(/\r\n/g,'\n').replace(/\r/g,'\n');
+ const tabbed=text.includes('\t');
+ const records=tabbed?splitClipboardTsv(text):text.split('\n').map((s,i)=>({cols:s.trim().split(/\s{2,}/),line:i+1})).filter(record=>record.cols.some(value=>value));
+ if(!records.length)return [];
+ const headers=records[0].cols,names=headers.map(norm);
+ const hasHeader=names.includes('symbol')||names.includes('ticker')||names.includes('execstatus')||(names.includes('side')&&names.includes('qty'));
+ const map=hasHeader?mapOrderHeaders(headers,required,headerAliases):null,data=hasHeader?records.slice(1):records;
+ if(!data.length)throw Error('Header terbaca, tetapi belum ada baris order.');
+ return data.map(record=>{
+  if(map&&record.cols.length!==headers.length)throw Error(`Baris ${record.line}: jumlah sel berbeda dari header. Copy seluruh tabel dengan pemisah tab, termasuk sel kosong.`);
+  return {cols:record.cols,line:record.line,m:map||fallback(record.cols,record.line,tabbed)};
+ });
+}
+function snapshotOrderKey(cols,map,account,fallback){
+ const orderId=map.orderId===undefined?'':cols[map.orderId]||'';
+ const usable=orderId&&!['-','0','n/a','null'].includes(orderId.toLowerCase());
+ return {orderId:usable?orderId:'',key:usable?'id|'+account+'|'+orderId:'row|'+fallback};
+}
+
+function parseSnapshot(text){
+ const data=readOrderTable(text,['status','side','symbol','px','qty','exec','leaves'],(cols,line,tabbed)=>{
+  if(!tabbed||![8,9,11,12].includes(cols.length))throw Error(`Baris ${line}: tanpa header, copy baris dengan pemisah tab dan kolom lengkap sesuai format Spot.`);
+  const hasAvg=cols.length===9||cols.length===12;
+  return hasAvg?{status:0,time:1,side:2,symbol:3,px:4,avg:5,qty:6,exec:7,leaves:8,desc:9,client:10,account:11}:{status:0,time:1,side:2,symbol:3,px:4,qty:5,exec:6,leaves:7,desc:8,client:9,account:10};
+ });
+ if(!data.length)return [];
+ const rows=[],seen=new Set();
+ const liveStatuses=new Set(['working','new','open','accepted','partiallyfilled','partfilled','partialfill','partial','pendingnew','pendingcancel','pendingreplace','pendingamend','amended','amend','restated']);
+ const retiredStatuses=new Set(['expired','canceled','cancelled','cancel','rejected','doneforday','donefortheday']);
+ const filledStatuses=new Set(['filled','fullyfilled']);
+ for(const {cols,line,m} of data){
+  for(const key of ['status','side','symbol','px','qty','exec','leaves'])if(cols[m[key]]===undefined||cols[m[key]]==='')throw Error(`Baris ${line}: kolom ${key} kosong atau tidak lengkap.`);
+  const status=cols[m.status],statusKey=norm(status);
+  if(['replaced','superseded'].includes(statusKey))throw Error(`Baris ${line}: status ${status} dapat memuat fill dari rantai amend. Copy hanya snapshot terakhir per order; hubungan order lama/pengganti belum tersedia pada tabel ini.`);
+  if(!liveStatuses.has(statusKey)&&!retiredStatuses.has(statusKey)&&!filledStatuses.has(statusKey))throw Error(`Baris ${line}: status ${status} belum dikenali. Kirim contoh status ini agar aturan ordernya bisa ditambahkan.`);
+  const retired=retiredStatuses.has(statusKey),filled=filledStatuses.has(statusKey),terminal=retired||filled;
+  const side=cols[m.side].toUpperCase();
+  if(!['B','BUY','S','SELL'].includes(side))throw Error(`Baris ${line}: Side harus B/Buy atau S/Sell.`);
+  const symbol=cols[m.symbol].toUpperCase();
+  if(!/^[A-Z][A-Z0-9.\-]{0,19}$/.test(symbol))throw Error(`Baris ${line}: ticker tidak valid.`);
+  const originalQty=integer(cols[m.qty],'Qty',line),exec=integer(cols[m.exec],'Exec. Qty',line),reportedLeaves=integer(cols[m.leaves],'LeavesQuantity',line);
+  if(exec>originalQty||exec+reportedLeaves>originalQty)throw Error(`Baris ${line}: executed + LeavesQuantity melebihi Qty.`);
+  if(!terminal&&(originalQty<=0n||exec+reportedLeaves!==originalQty))throw Error(`Baris ${line}: order aktif harus memiliki Qty yang sama dengan Exec. Qty + LeavesQuantity.`);
+  if(filled&&(exec!==originalQty||reportedLeaves!==0n))throw Error(`Baris ${line}: status Filled harus sudah terisi seluruhnya dan tidak memiliki open.`);
+  if(statusKey==='rejected'&&exec>0n)throw Error(`Baris ${line}: Rejected dengan execution perlu diperiksa; jangan campurkan reject amend dengan snapshot order.`);
+  const leaves=terminal?0n:reportedLeaves,qty=exec+leaves;
+  const px=price(cols[m.px],'Px',line);
+  const avg=m.avg!==undefined&&cols[m.avg]&&cols[m.avg]!=='-'&&Number(cleanNumber(cols[m.avg]))!==0?price(cols[m.avg],'Avg Px',line):null;
+  const account=cols[m.account]||'',client=cols[m.client]||'',acct=account+'|'+client;
+  const {key,orderId}=snapshotOrderKey(cols,m,acct,[acct,cols[m.time]||'',side,symbol,px,originalQty,exec,reportedLeaves].join('|'));
+  if(seen.has(key))throw Error(`Baris ${line}: baris duplikat atau order identik tanpa identitas pembeda. Copy hanya satu snapshot.`);
+  seen.add(key);rows.push({orderId,side:side[0],symbol,px,qty,originalQty,exec,leaves,reportedLeaves,avg,status,retired,terminal,account,client,desc:m.desc===undefined?'':cols[m.desc]||'',line});
+ }
+ const groups=new Map();
+ for(const r of rows){
+  const key=r.side+'|'+r.symbol;
+  if(!groups.has(key))groups.set(key,{key,side:r.side,symbol:r.symbol,rows:[],qty:0n,exec:0n,leaves:0n,needsFillCheck:false});
+  const g=groups.get(key);g.rows.push(r);g.qty+=r.qty;g.exec+=r.exec;g.leaves+=r.leaves;
+ }
+ for(const group of groups.values()){
+  const scopes=new Map();
+  for(const row of group.rows){
+   const key=row.account+'|'+row.client;
+   if(!scopes.has(key))scopes.set(key,{retiredFill:false,activeFill:false});
+   const scope=scopes.get(key);
+   if(row.retired&&row.exec>0n)scope.retiredFill=true;
+   if(!row.terminal&&row.exec>0n)scope.activeFill=true;
+  }
+  group.needsFillCheck=[...scopes.values()].some(scope=>scope.retiredFill&&scope.activeFill);
+ }
+ return [...groups.values()];
+}
+function makeResult(g,{usePx=false,actualAvg='',independentFills=false}={}){if(!g)return null;let average=null,source='',error='';if(g.exec>0n){if(actualAvg.trim()){average=avgText(price(actualAvg)*g.exec,g.exec);source='Average aktual yang Anda masukkan.';}else if(g.rows.every(r=>r.exec===0n||r.avg!==null)){average=avgText(g.rows.reduce((a,r)=>a+(r.avg||0n)*r.exec,0n),g.exec);source='';}else if(usePx){average=avgText(g.rows.reduce((a,r)=>a+r.px*r.exec,0n),g.exec);source='Average dihitung dengan asumsi eksekusi tepat di Px.';}else error='Harga eksekusi belum tersedia. Isi average aktual atau konfirmasi bahwa seluruh eksekusi terjadi di Px.';}
+if(g.needsFillCheck&&!independentFills)error=(error?error+'\n':'')+'Ada fill pada order nonaktif dan aktif. Periksa apakah order pengganti membawa fill lama, lalu konfirmasi agar tidak terhitung dua kali.';
+const levels=new Map();for(const r of g.rows)if(r.leaves>0n)levels.set(r.px,(levels.get(r.px)||0n)+r.leaves);const sorted=[...levels].sort((a,b)=>a[0]<b[0]?-1:a[0]>b[0]?1:0);const side=g.side==='B'?'Buy':'Sell',verb=g.side==='B'?'Bot':'Sold';let text=`update:\n${side} ${g.symbol} ${g.qty/100n} lot, @ Spot;\n${verb} ${g.symbol} ${g.exec/100n} lot`+(g.exec>0n?` @ ${average||'[isi average eksekusi]'}`:'')+'\nOpen at:\n'+(sorted.length?sorted.map(([px,n])=>`${displayPrice(px)} - ${n/100n} lot`).join('\n'):'-');return {text,ready:!error,error,source,average,status:g.qty===0n?'Tidak aktif':g.exec===0n?'Open':g.leaves===0n?(g.rows.some(r=>r.retired)?'Closed':'Done'):'Partial'};}
+const SHOW_ALL='__all__';
+let groups=[],current=null,revision=0,overrides=new Map();
+function selectedSpotGroups(){
+ const selection=$('group').value;
+ return selection===SHOW_ALL?groups:groups.filter(group=>group.key===selection);
+}
+function summarizeSpotResults(selected,options={}){
+ const all=options.all===true;
+ const entries=selected.map(group=>({group,result:makeResult(group,{
+  usePx:options.usePx===true,
+  actualAvg:options.averages?.get(group.key)||'',
+  independentFills:options.independentFills===true
+ })}));
+ const label=group=>`${group.symbol} ${group.side==='B'?'Buy':'Sell'}`;
+ return {
+  text:entries.length?'update:\n'+entries.map(entry=>entry.result.text.replace(/^update:\n/,'')).join('\n\n'):'',
+  ready:entries.length>0&&entries.every(entry=>entry.result.ready),
+  error:entries.filter(entry=>entry.result.error).map(entry=>(all?label(entry.group)+': ':'')+entry.result.error).join('\n\n'),
+  source:entries.filter(entry=>entry.result.source).map(entry=>(all?label(entry.group)+': ':'')+entry.result.source).join('\n'),
+  status:all?'Show all':entries[0]?.result.status||'Belum ada data'
+ };
+}
+function resetOutput(){
+ current=null;$('group').value=SHOW_ALL;setOutput('output','');$('copy').disabled=true;
+ for(const id of ['total','filled','open'])$(id).textContent='—';
+ $('status').textContent='Belum ada data';$('groupBox').hidden=true;$('detail').hidden=true;$('avgBox').hidden=true;$('avgMessage').hidden=true;$('fillCheckBox').hidden=true;
+}
+function parseInput(){
+ revision++;$('independentFills').checked=false;overrides.clear();$('actualAvg').value='';$('copyMessage').textContent='';
+ const previous=$('group').value;
+ try{
+  groups=parseSnapshot($('source').value);
+  if(!groups.length){resetOutput();$('parseMessage').hidden=true;$('parseMessage').textContent='';return;}
+  const allOption=document.createElement('option');allOption.value=SHOW_ALL;allOption.textContent='Show all';
+  const options=groups.map(group=>{const option=document.createElement('option');option.value=group.key;option.textContent=`${group.symbol} · ${group.side==='B'?'Buy':'Sell'} · ${group.qty/100n} lot`;return option;});
+  $('group').replaceChildren(allOption,...options);
+  $('group').value=groups.some(group=>group.key===previous)?previous:SHOW_ALL;
+  $('groupBox').hidden=false;$('parseMessage').hidden=true;$('parseMessage').textContent='';render();
+ }catch(error){groups=[];resetOutput();$('parseMessage').hidden=false;$('parseMessage').className='notice error';$('parseMessage').textContent=error.message;}
+}
+function render(){
+ revision++;$('copyMessage').textContent='';
+ const all=$('group').value===SHOW_ALL,selected=selectedSpotGroups();
+ current=all?null:selected[0]||null;
+ if(!selected.length){resetOutput();return;}
+ $('fillCheckBox').hidden=!selected.some(group=>group.needsFillCheck);
+ for(const [id,key] of [['total','qty'],['filled','exec'],['open','leaves']])$(id).textContent=(selected.reduce((sum,group)=>sum+group[key],0n)/100n).toLocaleString('id-ID');
+ const rows=selected.flatMap(group=>group.rows);
+ $('detail').hidden=false;
+ $('detailTitle').textContent=`Rincian ${all?'semua ticker':current.symbol+' '+(current.side==='B'?'Buy':'Sell')} · ${rows.length} baris`;
+ $('rows').replaceChildren(...rows.map(row=>{
+  const tr=document.createElement('tr');
+  for(const value of [row.symbol,row.side,row.status,displayPrice(row.px),row.avg?displayPrice(row.avg):'—',row.originalQty/100n,row.exec/100n,row.leaves/100n]){const td=document.createElement('td');td.textContent=String(value);tr.append(td);}
+  return tr;
+ }));
+ $('avgBox').hidden=all||current.exec===0n||(current.rows.every(row=>row.exec===0n||row.avg!==null)&&!$('actualAvg').value.trim());
+ try{
+  const averages=new Map(overrides);
+  if(current)averages.set(current.key,$('actualAvg').value);
+  const result=summarizeSpotResults(selected,{all,usePx:$('usePx').checked,averages,independentFills:$('independentFills').checked});
+  setOutput('output',result.text);$('copy').disabled=!result.ready;$('status').textContent=result.status;
+  const missingAverage=all&&selected.some(group=>group.exec>0n&&!averages.get(group.key)&&!$('usePx').checked&&group.rows.some(row=>row.exec>0n&&row.avg===null));
+  $('avgMessage').hidden=!result.error&&!result.source;
+  $('avgMessage').className='notice '+(result.ready?'ok':'warn');
+  $('avgMessage').textContent=(result.error||result.source)+(missingAverage?'\n\nPilih ticker di dropdown untuk mengisi average aktual.':'');
+ }catch(error){$('copy').disabled=true;setOutput('output','');$('avgMessage').hidden=false;$('avgMessage').className='notice error';$('avgMessage').textContent=error.message;}
+}
+async function copyResult(){if(document.getElementById('client-panel-J').hidden||document.getElementById('order-J-Spot').hidden||$('copy').disabled)return;const text=$('output').value,rev=revision;let copied=false;try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);copied=true;}}catch(e){}if(!copied){$('output').focus();$('output').select();try{copied=document.execCommand('copy');}catch(e){}}$('copyMessage').textContent=revision!==rev?'Data berubah. Copy ulang snapshot terbaru.':copied?'Tersalin. Paste ke WhatsApp.':'Tekan Ctrl+C pada pesan yang sudah dipilih.';}
+$('source').addEventListener('input',parseInput);$('clear').addEventListener('click',()=>{$('source').value='';parseInput();$('source').focus();});$('group').addEventListener('change',()=>{$('independentFills').checked=false;$('actualAvg').value=overrides.get($('group').value)||'';render();});$('actualAvg').addEventListener('input',()=>{if(current)overrides.set(current.key,$('actualAvg').value);render();});$('usePx').addEventListener('change',render);$('independentFills').addEventListener('change',render);$('copy').addEventListener('click',copyResult);document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key==='Enter'&&!document.getElementById('client-panel-J').hidden&&!document.getElementById('order-J-Spot').hidden){e.preventDefault();copyResult();}});
+if(document.modelContext?.registerTool){try{Promise.resolve(document.modelContext.registerTool({
+ name:'convert_order_snapshot',title:'Konversi snapshot order',
+ description:'Mengganti snapshot J Spot dan menampilkan semua ticker secara default, atau ticker/sisi yang dipilih. Tidak menyalin clipboard atau mengirim pesan.',
+ inputSchema:{type:'object',properties:{text:{type:'string',maxLength:2000000},use_order_price:{type:'boolean'},actual_average:{type:'string'},group_key:{type:'string',description:'Ticker/sisi seperti B|ICBP, atau __all__ untuk Show all. Default Show all.'},independent_fills:{type:'boolean'}},required:['text'],additionalProperties:false},
+ annotations:{readOnlyHint:false,untrustedContentHint:true},
+ execute(input){
+  if(!input||typeof input.text!=='string'||(input.use_order_price!==undefined&&typeof input.use_order_price!=='boolean')||(input.actual_average!==undefined&&typeof input.actual_average!=='string')||(input.group_key!==undefined&&typeof input.group_key!=='string')||(input.independent_fills!==undefined&&typeof input.independent_fills!=='boolean'))throw Error('Input tidak valid.');
+  const validated=parseSnapshot(input.text),key=input.group_key||SHOW_ALL,all=key===SHOW_ALL;
+  if(!all&&!validated.some(group=>group.key===key))throw Error('Ticker/sisi tidak tersedia.');
+  const selected=all?validated:validated.filter(group=>group.key===key),averages=new Map();
+  if(input.actual_average?.trim()){
+   if(selected.length!==1)throw Error('Average aktual harus diterapkan pada satu ticker/sisi. Tentukan group_key.');
+   price(input.actual_average);averages.set(selected[0].key,input.actual_average);
+  }
+  const result=summarizeSpotResults(selected,{all,usePx:input.use_order_price===true,averages,independentFills:input.independent_fills===true});
+  selectClient('J');selectType('J','Spot');$('source').value=input.text;$('usePx').checked=input.use_order_price===true;parseInput();
+  $('group').value=key;$('independentFills').checked=input.independent_fills===true;
+  for(const [groupKey,average] of averages)overrides.set(groupKey,average);
+  $('actualAvg').value=all?'':averages.get(key)||'';render();
+  return {groups:validated.map(group=>group.key),result:selected.length?{text:result.text,ready:result.ready,error:result.error,status:result.status}:null};
+ }
+})).catch(()=>{});}catch(error){}}
+</script>
+<script>
+'use strict';
+const CLIENTS={J:['Spot','OB'],H:['Spot','OB','Mix']};
+let activeClient='J';
+const activeType={J:'Spot',H:'Spot'};
+function selectClient(client){
+ if(!Object.hasOwn(CLIENTS,client))throw Error('Client tidak tersedia.');
+ activeClient=client;
+ for(const name of Object.keys(CLIENTS)){
+  const selected=name===client,tab=document.getElementById('client-'+name);
+  tab.setAttribute('aria-selected',String(selected));tab.tabIndex=selected?0:-1;
+  document.getElementById('client-panel-'+name).hidden=!selected;
+ }
+ resizeVisibleOutputs();
+}
+function selectType(client,type){
+ if(!Object.hasOwn(CLIENTS,client)||!CLIENTS[client].includes(type))throw Error('Tipe order tidak tersedia.');
+ activeType[client]=type;
+ for(const name of CLIENTS[client]){
+  const selected=name===type,tab=document.getElementById('type-'+client+'-'+name);
+  tab.setAttribute('aria-selected',String(selected));tab.tabIndex=selected?0:-1;
+  document.getElementById('order-'+client+'-'+name).hidden=!selected;
+ }
+ resizeVisibleOutputs();
+}
+function bindTabs(list,select){
+ const tabs=Array.from(list.querySelectorAll('[role="tab"]'));
+ for(const tab of tabs)tab.addEventListener('click',()=>select(tab));
+ list.addEventListener('keydown',event=>{
+  if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
+  const current=tabs.indexOf(event.target);if(current<0)return;
+  event.preventDefault();
+  const next=event.key==='Home'?0:event.key==='End'?tabs.length-1:(current+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;
+  select(tabs[next]);tabs[next].focus();
+ });
+}
+bindTabs(document.getElementById('client-tabs'),tab=>selectClient(tab.dataset.client));
+for(const client of Object.keys(CLIENTS))bindTabs(document.querySelector('.type-tabs[data-client="'+client+'"]'),tab=>selectType(client,tab.dataset.type));
+</script>
+<script>'use strict';
+function parseObSnapshot(text){
+ const data=readOrderTable(text,['side','symbol','px','qty','exec','avg'],(cols,line,tabbed)=>{
+  if(!tabbed||cols.length!==13)throw Error(`Baris ${line}: tanpa header, gunakan 13 kolom dengan pemisah tab sesuai format J OB/CD.`);
+  return {status:0,time:1,side:2,symbol:3,desc:4,px:6,qty:7,exec:8,avg:9,account:11,leaves:12};
+ });
+ if(!data.length)return [];
+ const rows=[],seen=new Set();
+ for(const {cols,line,m} of data){
+  for(const key of ['side','symbol','px','qty','exec'])if(cols[m[key]]===undefined||cols[m[key]]==='')throw Error(`Baris ${line}: kolom ${key} kosong atau tidak lengkap.`);
+  const sideText=cols[m.side].toUpperCase();
+  if(!['B','BUY','S','SELL'].includes(sideText))throw Error(`Baris ${line}: Side harus B/Buy atau S/Sell.`);
+  const side=sideText[0],symbol=cols[m.symbol].toUpperCase();
+  if(!/^[A-Z][A-Z0-9.\-]{0,19}$/.test(symbol))throw Error(`Baris ${line}: ticker tidak valid.`);
+  const qty=integer(cols[m.qty],'Qty',line),exec=integer(cols[m.exec],'Exec. Qty',line);
+  if(qty<=0n||exec>qty)throw Error(`Baris ${line}: Qty harus positif dan Exec. Qty tidak boleh melebihi Qty.`);
+  const isMarket=cols[m.px].toLowerCase()==='market',px=isMarket?null:price(cols[m.px],'Px',line);
+  const rawAvg=m.avg===undefined?'':cols[m.avg];
+  const avg=rawAvg&&rawAvg!=='-'&&Number(cleanNumber(rawAvg))!==0?price(rawAvg,'Avg Px',line):null;
+  if(exec>0n&&avg===null)throw Error(`Baris ${line}: Avg Px diperlukan karena order sudah memiliki execution.`);
+  const account=cols[m.account]||'',client=m.client===undefined?'':cols[m.client]||'';
+  const time=cols[m.time]||'';
+  const {key,orderId}=snapshotOrderKey(cols,m,account+'|'+client,[account,client,time,side,symbol,isMarket?'market':px,qty,exec].join('|'));
+  if(seen.has(key))throw Error(`Baris ${line}: baris duplikat atau order identik. Copy hanya satu snapshot per order.`);
+  seen.add(key);rows.push({key,orderId,side,symbol,qty,exec,avg,px,isMarket,time,account,client,desc:m.desc===undefined?'':cols[m.desc]||'',line});
+ }
+ return rows;
+}
+function formatObOrder(row){
+ const target=row.isMarket?'CD':`${displayPrice(row.px)} OB`;
+ const side=row.side==='B'?'Buy':'Sell',verb=row.side==='B'?'Bot':'Sold';
+ return `${side} ${row.symbol} ${row.qty/100n} lot@ ${target}\n${verb} ${row.exec/100n} lot`+(row.exec>0n?`@ ${displayPrice(row.avg)}`:'');
+}
+const OB_SHOW_ALL='__all__';
+let obRows=[],obRevision=0;
+function resetObOutput(){
+ setOutput('obOutput','');$('obOrder').value=OB_SHOW_ALL;$('obCopy').disabled=true;$('obOrderBox').hidden=true;$('obStatus').textContent='Belum ada data';
+ for(const id of ['obTotal','obFilled','obAverage'])$(id).textContent='—';
+}
+function renderObOrder(){
+ obRevision++;$('obCopyMessage').textContent='';
+ const all=$('obOrder').value===OB_SHOW_ALL;
+ const selected=all?obRows:[obRows[Number($('obOrder').value)]].filter(Boolean);
+ if(!selected.length){resetObOutput();return;}
+ $('obTotal').textContent=(selected.reduce((sum,row)=>sum+row.qty,0n)/100n).toLocaleString('id-ID');
+ $('obFilled').textContent=(selected.reduce((sum,row)=>sum+row.exec,0n)/100n).toLocaleString('id-ID');
+ $('obAverage').textContent=selected.length===1&&selected[0].avg?displayPrice(selected[0].avg):'—';
+ $('obStatus').textContent=all?'Show all':selected[0].isMarket?'CD':'OB';
+ setOutput('obOutput',selected.map(formatObOrder).join('\n\n'));$('obCopy').disabled=false;
+}
+function parseObInput(){
+ obRevision++;$('obCopyMessage').textContent='';
+ const prior=$('obOrder').value===OB_SHOW_ALL?null:obRows[Number($('obOrder').value)];
+ try{
+  obRows=parseObSnapshot($('obSource').value);$('obParseMessage').hidden=true;$('obParseMessage').textContent='';
+  if(!obRows.length){resetObOutput();return;}
+  const options=obRows.map((r,i)=>{const option=document.createElement('option');option.value=String(i);option.textContent=`${r.side} ${r.symbol} · ${r.qty/100n} lot · ${r.isMarket?'CD':displayPrice(r.px)+' OB'}${r.time?' · '+r.time:''}`;return option;});
+  const allOption=document.createElement('option');allOption.value=OB_SHOW_ALL;allOption.textContent='Show all';
+  $('obOrder').replaceChildren(allOption,...options);
+  // Keep the same order selected when a newer snapshot contains its execution update.
+  const index=prior?obRows.findIndex(r=>r.account===prior.account&&r.client===prior.client&&(prior.orderId?r.orderId===prior.orderId:r.time===prior.time&&r.side===prior.side&&r.symbol===prior.symbol&&r.px===prior.px&&r.isMarket===prior.isMarket)):-1;
+  $('obOrder').value=index<0?OB_SHOW_ALL:String(index);$('obOrderBox').hidden=false;renderObOrder();
+ }catch(error){obRows=[];resetObOutput();$('obParseMessage').hidden=false;$('obParseMessage').textContent=error.message;}
+}
+async function copyObResult(){
+ if($('client-panel-J').hidden||$('order-J-OB').hidden||$('obCopy').disabled)return;
+ const text=$('obOutput').value,revision=obRevision;let copied=false;
+ try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);copied=true;}}catch(error){}
+ if(!copied){$('obOutput').focus();$('obOutput').select();try{copied=document.execCommand('copy');}catch(error){}}
+ $('obCopyMessage').textContent=revision!==obRevision?'Data berubah. Copy ulang snapshot terbaru.':copied?'Tersalin. Paste ke WhatsApp.':'Tekan Ctrl+C pada pesan yang sudah dipilih.';
+}
+$('obSource').addEventListener('input',parseObInput);
+$('obOrder').addEventListener('change',renderObOrder);
+$('obClear').addEventListener('click',()=>{$('obSource').value='';parseObInput();$('obSource').focus();});
+$('obCopy').addEventListener('click',copyObResult);
+document.addEventListener('keydown',event=>{if((event.ctrlKey||event.metaKey)&&event.key==='Enter'&&!$('client-panel-J').hidden&&!$('order-J-OB').hidden){event.preventDefault();copyObResult();}});
+</script>
+<script>
+'use strict';
+const H_OB_ALIASES={...aliases,percent:['exec','percentexec','execpercent','pctexec','executionpercentage']};
+function hObPercent(text,line){
+ const value=String(text??'').replace(/%\s*$/,'').trim().replace(',','.');
+ if(!/^\d+(\.\d{1,30})?$/.test(value)||Number(value)>100)throw Error(`Baris ${line}: % Exec harus angka antara 0 dan 100.`);
+ const [whole,fraction='']=value.split('.'),scale=10n**BigInt(fraction.length),raw=BigInt(whole)*scale+BigInt(fraction||'0');
+ if(raw>100n*scale)throw Error(`Baris ${line}: % Exec tidak boleh melebihi 100.`);
+ const rounded=(raw*100n+scale/2n)/scale;
+ return `${rounded/100n}.${(rounded%100n).toString().padStart(2,'0')}`;
+}
+function hObAverage(avg){
+ if(avg===null)return '—';
+ const rounded=(avg+50n)/100n;
+ return `${rounded/10000n}.${(rounded%10000n).toString().padStart(4,'0')}`;
+}
+function parseHObSnapshot(text,{requirePercent=true,includeParent=false}={}){
+ const headerAliases=includeParent?{...(requirePercent?H_OB_ALIASES:aliases),parentId:['parentorderid']}:requirePercent?H_OB_ALIASES:aliases;
+ const data=readOrderTable(text,requirePercent?['side','symbol','exec','avg','percent']:['side','symbol','exec','avg'],(cols,line,tabbed)=>{
+  if(!tabbed||cols.length!==13)throw Error(`Baris ${line}: sertakan header untuk membaca kolom H CD/OB.`);
+  return {status:0,time:1,side:2,symbol:3,desc:4,px:6,qty:7,exec:8,avg:9,percent:10,account:11,leaves:12};
+ },headerAliases);
+ const rows=[],seen=new Set();
+ for(const {cols,line,m} of data){
+  const sideText=(cols[m.side]||'').toUpperCase(),symbol=(cols[m.symbol]||'').toUpperCase();
+  if(!['B','BUY','S','SELL'].includes(sideText))throw Error(`Baris ${line}: Side harus B/Buy atau S/Sell.`);
+  if(!/^[A-Z][A-Z0-9.\-]{0,19}$/.test(symbol))throw Error(`Baris ${line}: ticker tidak valid.`);
+  const side=sideText[0],exec=integer(cols[m.exec],'Exec. Qty',line);
+  const qty=m.qty===undefined?null:integer(cols[m.qty],'Qty',line);
+  if(qty!==null&&(qty<=0n||exec>qty))throw Error(`Baris ${line}: Qty harus positif dan Exec. Qty tidak boleh melebihi Qty.`);
+  const rawAvg=cols[m.avg],avg=rawAvg&&rawAvg!=='-'&&Number(cleanNumber(rawAvg))!==0?price(rawAvg,'Avg Px',line):null;
+  if(exec>0n&&avg===null)throw Error(`Baris ${line}: Avg Px diperlukan karena order sudah memiliki execution.`);
+  const percent=requirePercent?hObPercent(cols[m.percent],line):null;
+  const account=m.account===undefined?'':cols[m.account]||'',client=m.client===undefined?'':cols[m.client]||'';
+  const time=m.time===undefined?'':cols[m.time]||'',px=m.px===undefined?'':cols[m.px]||'';
+  const {key,orderId}=snapshotOrderKey(cols,m,account+'|'+client,[account,client,time,side,symbol,px,qty,exec,avg,percent].join('|'));
+  if(seen.has(key))throw Error(`Baris ${line}: baris duplikat atau order identik. Copy hanya satu snapshot per order.`);
+  const parentId=includeParent&&m.parentId!==undefined?cols[m.parentId]||'':'';
+  seen.add(key);rows.push({key,orderId,side,symbol,exec,avg,percent,account,client,time,px,desc:m.desc===undefined?'':cols[m.desc]||'',...(includeParent?{parentId}:{})});
+ }
+ return rows;
+}
+function formatHObOrder(row){return `${row.side} ${row.symbol} ${row.exec/100n} lot@ ${hObAverage(row.avg)} (${row.percent}%)`;}
+let hObRows=[],hObRevision=0;
+function resetHObOutput(){
+ setOutput('hObOutput','');$('hObOrder').value=OB_SHOW_ALL;$('hObCopy').disabled=true;$('hObOrderBox').hidden=true;$('hObStatus').textContent='Belum ada data';
+ for(const id of ['hObTotal','hObFilled','hObAverage'])$(id).textContent='—';
+}
+function renderHObOrder(){
+ hObRevision++;$('hObCopyMessage').textContent='';
+ const all=$('hObOrder').value===OB_SHOW_ALL,selected=all?hObRows:[hObRows[Number($('hObOrder').value)]].filter(Boolean);
+ if(!selected.length){resetHObOutput();return;}
+ $('hObTotal').textContent=(selected.reduce((sum,row)=>sum+row.exec,0n)/100n).toLocaleString('id-ID');
+ $('hObFilled').textContent=selected.length===1?selected[0].percent+'%':'—';
+ $('hObAverage').textContent=selected.length===1?hObAverage(selected[0].avg):'—';
+ $('hObStatus').textContent=all?'Show all':selected[0].side+' '+selected[0].symbol;
+ setOutput('hObOutput',selected.map(formatHObOrder).join('\n'));$('hObCopy').disabled=false;
+}
+function parseHObInput(){
+ hObRevision++;$('hObCopyMessage').textContent='';
+ const prior=$('hObOrder').value===OB_SHOW_ALL?null:hObRows[Number($('hObOrder').value)];
+ try{
+  hObRows=parseHObSnapshot($('hObSource').value);$('hObParseMessage').hidden=true;$('hObParseMessage').textContent='';
+  if(!hObRows.length){resetHObOutput();return;}
+  const allOption=document.createElement('option');allOption.value=OB_SHOW_ALL;allOption.textContent='Show all';
+  const options=hObRows.map((row,i)=>{const option=document.createElement('option');option.value=String(i);option.textContent=`${row.side} ${row.symbol} · ${row.exec/100n} lot${row.time?' · '+row.time:''}`;return option;});
+  $('hObOrder').replaceChildren(allOption,...options);
+  const index=prior?hObRows.findIndex(row=>row.account===prior.account&&row.client===prior.client&&(prior.orderId?row.orderId===prior.orderId:row.time===prior.time&&row.side===prior.side&&row.symbol===prior.symbol&&row.px===prior.px)):-1;
+  $('hObOrder').value=index<0?OB_SHOW_ALL:String(index);$('hObOrderBox').hidden=false;renderHObOrder();
+ }catch(error){hObRows=[];resetHObOutput();$('hObParseMessage').hidden=false;$('hObParseMessage').textContent=error.message;}
+}
+async function copyHObResult(){
+ if($('client-panel-H').hidden||$('order-H-OB').hidden||$('hObCopy').disabled)return;
+ const text=$('hObOutput').value,revision=hObRevision;let copied=false;
+ try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);copied=true;}}catch(error){}
+ if(!copied){$('hObOutput').focus();$('hObOutput').select();try{copied=document.execCommand('copy');}catch(error){}}
+ $('hObCopyMessage').textContent=revision!==hObRevision?'Data berubah. Copy ulang snapshot terbaru.':copied?'Tersalin. Paste ke WhatsApp.':'Tekan Ctrl+C pada pesan yang sudah dipilih.';
+}
+$('hObSource').addEventListener('input',parseHObInput);
+$('hObOrder').addEventListener('change',renderHObOrder);
+$('hObClear').addEventListener('click',()=>{$('hObSource').value='';parseHObInput();$('hObSource').focus();});
+$('hObCopy').addEventListener('click',copyHObResult);
+document.addEventListener('keydown',event=>{if((event.ctrlKey||event.metaKey)&&event.key==='Enter'&&!$('client-panel-H').hidden&&!$('order-H-OB').hidden){event.preventDefault();copyHObResult();}});
+</script>
+<script>
+'use strict';
+function hSpotAverage(group){
+ const [whole,fraction='']=avgText(group.value,group.exec).split('.');
+ const decimals=fraction.replace(/0+$/,'');
+ return whole.replace(/\B(?=(\d{3})+(?!\d))/g,',')+(decimals?'.'+decimals:'');
+}
+function parseHSpotSnapshot(text){
+ return groupHSpotRows(parseHObSnapshot(text,{requirePercent:false}));
+}
+function groupHSpotRows(rows){
+ const groups=new Map();
+ for(const row of rows){
+  const key=row.side+'|'+row.symbol;
+  if(!groups.has(key))groups.set(key,{key,side:row.side,symbol:row.symbol,exec:0n,value:0n});
+  const group=groups.get(key);group.exec+=row.exec;group.value+=(row.avg||0n)*row.exec;
+ }
+ return [...groups.values()].filter(group=>group.exec>0n);
+}
+function formatHSpotUpdate(groups){return groups.length?'update:\n'+groups.map(group=>`${group.side==='B'?'Bot':'Sold'} ${group.symbol} ${group.exec/100n} lot@ ${hSpotAverage(group)}`).join('\n'):'';}
+let hSpotGroups=[],hSpotRevision=0;
+function resetHSpotOutput(){
+ setOutput('hSpotOutput','');$('hSpotOrder').value=OB_SHOW_ALL;$('hSpotCopy').disabled=true;$('hSpotOrderBox').hidden=true;$('hSpotStatus').textContent='Belum ada data';
+ for(const id of ['hSpotTotal','hSpotFilled','hSpotAverage'])$(id).textContent='—';
+}
+function renderHSpotUpdate(){
+ hSpotRevision++;$('hSpotCopyMessage').textContent='';
+ const all=$('hSpotOrder').value===OB_SHOW_ALL,selected=all?hSpotGroups:hSpotGroups.filter(group=>group.key===$('hSpotOrder').value);
+ if(!selected.length){resetHSpotOutput();return;}
+ $('hSpotTotal').textContent=(selected.reduce((sum,group)=>sum+group.exec,0n)/100n).toLocaleString('id-ID');
+ $('hSpotFilled').textContent=String(selected.length);
+ $('hSpotAverage').textContent=selected.length===1?hSpotAverage(selected[0]):'—';
+ $('hSpotStatus').textContent=all?'Show all':selected[0].symbol+' · '+(selected[0].side==='B'?'Buy':'Sell');
+ setOutput('hSpotOutput',formatHSpotUpdate(selected));$('hSpotCopy').disabled=false;
+}
+function parseHSpotInput(){
+ hSpotRevision++;$('hSpotCopyMessage').textContent='';const previous=$('hSpotOrder').value;
+ try{
+  hSpotGroups=parseHSpotSnapshot($('hSpotSource').value);$('hSpotParseMessage').hidden=true;$('hSpotParseMessage').textContent='';
+  if(!hSpotGroups.length){resetHSpotOutput();if($('hSpotSource').value.trim())$('hSpotStatus').textContent='Belum ada execution';return;}
+  const allOption=document.createElement('option');allOption.value=OB_SHOW_ALL;allOption.textContent='Show all';
+  const options=hSpotGroups.map(group=>{const option=document.createElement('option');option.value=group.key;option.textContent=`${group.symbol} · ${group.side==='B'?'Buy':'Sell'} · ${group.exec/100n} lot`;return option;});
+  $('hSpotOrder').replaceChildren(allOption,...options);$('hSpotOrder').value=hSpotGroups.some(group=>group.key===previous)?previous:OB_SHOW_ALL;
+  $('hSpotOrderBox').hidden=false;renderHSpotUpdate();
+ }catch(error){hSpotGroups=[];resetHSpotOutput();$('hSpotParseMessage').hidden=false;$('hSpotParseMessage').textContent=error.message;}
+}
+async function copyHSpotResult(){
+ if($('client-panel-H').hidden||$('order-H-Spot').hidden||$('hSpotCopy').disabled)return;
+ const text=$('hSpotOutput').value,revision=hSpotRevision;let copied=false;
+ try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);copied=true;}}catch(error){}
+ if(!copied){$('hSpotOutput').focus();$('hSpotOutput').select();try{copied=document.execCommand('copy');}catch(error){}}
+ $('hSpotCopyMessage').textContent=revision!==hSpotRevision?'Data berubah. Copy ulang snapshot terbaru.':copied?'Tersalin. Paste ke WhatsApp.':'Tekan Ctrl+C pada pesan yang sudah dipilih.';
+}
+$('hSpotSource').addEventListener('input',parseHSpotInput);
+$('hSpotOrder').addEventListener('change',renderHSpotUpdate);
+$('hSpotClear').addEventListener('click',()=>{$('hSpotSource').value='';parseHSpotInput();$('hSpotSource').focus();});
+$('hSpotCopy').addEventListener('click',copyHSpotResult);
+document.addEventListener('keydown',event=>{if((event.ctrlKey||event.metaKey)&&event.key==='Enter'&&!$('client-panel-H').hidden&&!$('order-H-Spot').hidden){event.preventDefault();copyHSpotResult();}});
+</script>
+<script>
+'use strict';
+function hMixKey(row){return row.side+'|'+row.symbol;}
+function hMixBookAverage(avg){const [whole,fraction]=hObAverage(avg).split('.');return whole.replace(/\B(?=(\d{3})+(?!\d))/g,',')+(fraction?'.'+fraction:'');}
+function hMixSpotAverage(group){const [whole,fraction='']=avgText(group.value,group.exec).split('.');return whole+'.'+fraction.padEnd(4,'0');}
+function readHMixRows(bookText,marketText,{requirePercent=true}={}){
+ let bookRows,marketRows;
+ try{bookRows=parseHObSnapshot(bookText,{includeParent:true,requirePercent});}catch(error){throw Error('Order book: '+error.message);}
+ try{marketRows=parseHObSnapshot(marketText,{requirePercent:false,includeParent:true});}catch(error){throw Error('Market orders: '+error.message);}
+ const sameSubaccount=(a,b)=>['account','client'].every(key=>!a[key]||!b[key]||a[key]===b[key]);
+ const byId=new Map();
+ for(const row of bookRows)if(row.orderId){if(!byId.has(row.orderId))byId.set(row.orderId,[]);byId.get(row.orderId).push(row);}
+ function findBook(id,row){
+  const matches=(byId.get(id)||[]).filter(book=>sameSubaccount(book,row));
+  if(matches.length>1)throw Error('OrderId muncul pada beberapa subaccount. Sertakan Account/ClientId pada kedua input untuk mencocokkan order.');
+  return matches[0];
+ }
+ const remaining=marketRows.filter(row=>{
+  const same=row.orderId&&findBook(row.orderId,row);
+  if(same){
+   if(hMixKey(same)!==hMixKey(row)||same.exec!==row.exec||same.avg!==row.avg)throw Error('Order yang sama memiliki data berbeda di kedua input. Paste snapshot terbaru yang sesuai.');
+   return false;
+  }
+  const parent=row.parentId&&findBook(row.parentId,row);
+  if(parent){if(hMixKey(parent)!==hMixKey(row))throw Error('Side/symbol child order tidak sesuai dengan order book.');return false;}
+  const overlap=bookRows.filter(book=>sameSubaccount(book,row)&&hMixKey(book)===hMixKey(row));
+  if(row.exec>0n&&overlap.length&&!(row.parentId&&overlap.every(book=>book.orderId)))throw Error(`${row.symbol} ${row.side==='B'?'Buy':'Sell'} muncul pada kedua input. Sertakan OrderId di Order book dan ParentOrderId di Market orders, atau pisahkan order agar fill tidak terhitung dua kali.`);
+  return true;
+ });
+ return {bookRows,remaining};
+}
+function makeHMixEntries(bookText,marketText){
+ const {bookRows,remaining}=readHMixRows(bookText,marketText);
+ return [
+  ...bookRows.map(row=>({key:hMixKey(row),symbol:row.symbol,side:row.side,exec:row.exec,average:hMixBookAverage(row.avg),text:`${row.side==='B'?'Bot':'Sold'} ${row.symbol} ${row.exec/100n} lot@ ${hMixBookAverage(row.avg)} (${row.percent}%)`})),
+  ...groupHSpotRows(remaining).map(group=>({key:group.key,symbol:group.symbol,side:group.side,exec:group.exec,average:hMixSpotAverage(group),text:`${group.side==='B'?'Bot':'Sold'} ${group.symbol} ${group.exec/100n} lot@ ${hMixSpotAverage(group)}`}))
+ ];
+}
+let hMixEntries=[],hMixRevision=0;
+function resetHMixOutput(){
+ setOutput('hMixOutput','');$('hMixOrder').value=OB_SHOW_ALL;$('hMixCopy').disabled=true;$('hMixOrderBox').hidden=true;$('hMixStatus').textContent='Belum ada data';
+ for(const id of ['hMixTotal','hMixCount','hMixAverage'])$(id).textContent='—';
+}
+function renderHMixUpdate(){
+ hMixRevision++;$('hMixCopyMessage').textContent='';
+ const all=$('hMixOrder').value===OB_SHOW_ALL,selected=all?hMixEntries:hMixEntries.filter(entry=>entry.key===$('hMixOrder').value);
+ if(!selected.length){resetHMixOutput();return;}
+ $('hMixTotal').textContent=(selected.reduce((sum,entry)=>sum+entry.exec,0n)/100n).toLocaleString('id-ID');
+ $('hMixCount').textContent=String(new Set(selected.map(entry=>entry.key)).size);
+ $('hMixAverage').textContent=selected.length===1?selected[0].average:'—';
+ $('hMixStatus').textContent=all?'Show all':selected[0].symbol+' · '+(selected[0].side==='B'?'Buy':'Sell');
+ setOutput('hMixOutput',selected.map(entry=>entry.text).join('\n'));$('hMixCopy').disabled=false;
+}
+function parseHMixInput(){
+ hMixRevision++;$('hMixCopyMessage').textContent='';$('hMixParseMessage').hidden=true;$('hMixParseMessage').textContent='';
+ const previous=$('hMixOrder').value,book=$('hMixBookSource').value,market=$('hMixMarketSource').value;
+ if(!book.trim()||!market.trim()){hMixEntries=[];resetHMixOutput();if(book.trim()||market.trim())$('hMixStatus').textContent='Isi kedua input';return;}
+ try{
+  hMixEntries=makeHMixEntries(book,market);
+  if(!hMixEntries.length){resetHMixOutput();return;}
+  const allOption=document.createElement('option');allOption.value=OB_SHOW_ALL;allOption.textContent='Show all';
+  const groups=[...new Map(hMixEntries.map(entry=>[entry.key,entry])).values()];
+  const options=groups.map(entry=>{const option=document.createElement('option');option.value=entry.key;option.textContent=entry.symbol+' · '+(entry.side==='B'?'Buy':'Sell');return option;});
+  $('hMixOrder').replaceChildren(allOption,...options);$('hMixOrder').value=groups.some(entry=>entry.key===previous)?previous:OB_SHOW_ALL;
+  $('hMixOrderBox').hidden=false;renderHMixUpdate();
+ }catch(error){hMixEntries=[];resetHMixOutput();$('hMixParseMessage').hidden=false;$('hMixParseMessage').textContent=error.message;}
+}
+async function copyHMixResult(){
+ if($('client-panel-H').hidden||$('order-H-Mix').hidden||$('hMixCopy').disabled)return;
+ const text=$('hMixOutput').value,revision=hMixRevision;let copied=false;
+ try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);copied=true;}}catch(error){}
+ if(!copied){$('hMixOutput').focus();$('hMixOutput').select();try{copied=document.execCommand('copy');}catch(error){}}
+ $('hMixCopyMessage').textContent=revision!==hMixRevision?'Data berubah. Copy ulang snapshot terbaru.':copied?'Tersalin. Paste ke WhatsApp.':'Tekan Ctrl+C pada pesan yang sudah dipilih.';
+}
+for(const [source,clear] of [['hMixBookSource','hMixBookClear'],['hMixMarketSource','hMixMarketClear']]){
+ $(source).addEventListener('input',parseHMixInput);
+ $(clear).addEventListener('click',()=>{$(source).value='';parseHMixInput();$(source).focus();});
+}
+$('hMixOrder').addEventListener('change',renderHMixUpdate);
+$('hMixCopy').addEventListener('click',copyHMixResult);
+document.addEventListener('keydown',event=>{if((event.ctrlKey||event.metaKey)&&event.key==='Enter'&&!$('client-panel-H').hidden&&!$('order-H-Mix').hidden){event.preventDefault();copyHMixResult();}});
+</script>
+<script>
+const EXCEL_TEMPLATES={"J": {"styles": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:styleSheet xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:numFmts count=\"4\"><x:numFmt numFmtId=\"200\" formatCode=\"#,##0\" /><x:numFmt numFmtId=\"201\" formatCode=\"#,##0.######\" /><x:numFmt numFmtId=\"202\" formatCode=\"@\" /><x:numFmt numFmtId=\"203\" formatCode=\"#,##0.0000\" /></x:numFmts><x:fonts count=\"2\"><x:font><x:sz val=\"11\" /><x:color rgb=\"FF000000\" /><x:name val=\"Aptos Narrow\" /></x:font><x:font><x:sz val=\"11\" /><x:color rgb=\"FF000000\" /><x:name val=\"Aptos Narrow\" /></x:font></x:fonts><x:fills count=\"2\"><x:fill><x:patternFill patternType=\"none\" /></x:fill><x:fill><x:patternFill patternType=\"gray125\" /></x:fill></x:fills><x:borders count=\"1\"><x:border /></x:borders><x:cellStyleXfs count=\"1\"><x:xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\" /></x:cellStyleXfs><x:cellXfs count=\"6\"><x:xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\" xfId=\"0\" /><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"201\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"202\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"203\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /></x:cellXfs><x:cellStyles count=\"1\"><x:cellStyle name=\"Normal\" xfId=\"0\" /></x:cellStyles></x:styleSheet>", "headerStyles": [1, 1, 1, 1, 1, 1, 1], "bodyStyles": [1, 1, 2, 3, 1, 4, 4], "summaryStyles": [1, 2, 1, 5], "widths": [16, 16, 15, 18, 32, 18, 18]}, "H": {"styles": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:styleSheet xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:numFmts count=\"3\"><x:numFmt numFmtId=\"200\" formatCode=\"#,##0\" /><x:numFmt numFmtId=\"201\" formatCode=\"#,##0.0000\" /><x:numFmt numFmtId=\"202\" formatCode=\"@\" /></x:numFmts><x:fonts count=\"2\"><x:font><x:sz val=\"11\" /><x:color rgb=\"FF000000\" /><x:name val=\"Aptos Narrow\" /></x:font><x:font><x:sz val=\"11\" /><x:color rgb=\"FF000000\" /><x:name val=\"Aptos Narrow\" /></x:font></x:fonts><x:fills count=\"2\"><x:fill><x:patternFill patternType=\"none\" /></x:fill><x:fill><x:patternFill patternType=\"gray125\" /></x:fill></x:fills><x:borders count=\"1\"><x:border /></x:borders><x:cellStyleXfs count=\"1\"><x:xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\" /></x:cellStyleXfs><x:cellXfs count=\"5\"><x:xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\" xfId=\"0\" /><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"201\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"202\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /></x:cellXfs><x:cellStyles count=\"1\"><x:cellStyle name=\"Normal\" xfId=\"0\" /></x:cellStyles></x:styleSheet>", "headerStyles": [1, 1, 1, 1, 1, 1], "bodyStyles": [1, 1, 1, 2, 3, 4], "summaryStyles": [0, 0, 0, 0], "widths": [9, 16, 76, 17, 20, 18]}};
+'use strict';
+const EXCEL_TABS=[
+ {id:'exportJSpot',client:'J',type:'Spot',panel:'order-J-Spot',message:'copyMessage'},
+ {id:'exportJOb',client:'J',type:'OB-CD',panel:'order-J-OB',message:'obCopyMessage'},
+ {id:'exportHSpot',client:'H',type:'Spot',panel:'order-H-Spot',message:'hSpotCopyMessage'},
+ {id:'exportHOb',client:'H',type:'CD-OB',panel:'order-H-OB',message:'hObCopyMessage'},
+ {id:'exportHMix',client:'H',type:'Mix',panel:'order-H-Mix',message:'hMixCopyMessage'}
+];
+function collectFinalRows(id){
+ let rows;
+ if(id==='exportJSpot'){
+  const snapshot=parseSnapshot($('source').value);
+  if(snapshot.some(group=>group.needsFillCheck)&&!$('independentFills').checked)throw Error('Periksa fill order nonaktif/aktif dan konfirmasi sebelum export.');
+  rows=snapshot.flatMap(group=>group.rows);
+ }else if(id==='exportJOb')rows=parseObSnapshot($('obSource').value);
+ else if(id==='exportHSpot')rows=parseHObSnapshot($('hSpotSource').value,{requirePercent:false});
+ else if(id==='exportHOb')rows=parseHObSnapshot($('hObSource').value,{requirePercent:false});
+ else if(id==='exportHMix'){
+  if(!$('hMixBookSource').value.trim()||!$('hMixMarketSource').value.trim())throw Error('Isi Order book dan Market orders.');
+  const {bookRows,remaining}=readHMixRows($('hMixBookSource').value,$('hMixMarketSource').value,{requirePercent:false});
+  rows=[...bookRows,...remaining];
+ }else throw Error('Tab export tidak tersedia.');
+ rows=rows.filter(row=>row.exec>0n);
+ if(!rows.length)throw Error('Belum ada execution untuk diexport.');
+ if(rows.some(row=>row.avg===null))throw Error('Avg Px setiap order yang sudah terisi diperlukan untuk rekap final.');
+ return rows;
+}
+function excelSafeQuantity(value){if(value>BigInt(Number.MAX_SAFE_INTEGER))throw Error('Total Qty terlalu besar untuk ditulis secara akurat di Excel.');return Number(value);}
+function finalSheets(client,rows,{stacked=false}={}){
+ const template=EXCEL_TEMPLATES[client],groups=new Map();
+ for(const row of rows){
+  const key=JSON.stringify(client==='J'?[row.symbol,row.side,row.account,row.client,row.avg.toString()]:[row.symbol,row.side,row.account]);
+  if(!groups.has(key))groups.set(key,{...row,exec:0n,value:0n});
+  const group=groups.get(key);group.exec+=row.exec;group.value+=row.exec*row.avg;
+  if(!group.desc&&row.desc)group.desc=row.desc;
+ }
+ const all=[...groups.values()].sort((a,b)=>a.symbol.localeCompare(b.symbol)||a.side.localeCompare(b.side)||a.account.localeCompare(b.account)||a.client.localeCompare(b.client)||(client==='J'?(a.avg<b.avg?-1:a.avg>b.avg?1:0):0));
+ if(client==='H')return [{name:'Sheet1',client,header:['Side','Symbol','Account Desc','Exec. Qty','Avg Px','Account'],widths:excelWidths(template.widths,all.map(row=>[row.side,row.symbol,row.desc,excelSafeQuantity(row.exec),Number(avgText(row.value,row.exec)),row.account])),rows:all.map(row=>[row.side,row.symbol,row.desc,excelSafeQuantity(row.exec),Number(avgText(row.value,row.exec)),row.account]),summaries:[]}];
+ const symbols=[...new Set(all.map(row=>row.symbol))];
+ const sheets=symbols.map(symbol=>{
+  const detail=all.filter(row=>row.symbol===symbol),data=detail.map(row=>[row.side,row.symbol,excelSafeQuantity(row.exec),Number(row.avg)/1e6,row.desc,row.account,row.client]),summaries=[];
+  let next=data.length+3;
+  for(const side of ['B','S']){
+   const matching=detail.filter(row=>row.side===side);if(!matching.length)continue;
+   const qty=matching.reduce((sum,row)=>sum+row.exec,0n),value=matching.reduce((sum,row)=>sum+row.value,0n),verb=side==='B'?'Buy':'Sell',last=data.length+1;
+   const totalFormula=`SUMIFS(C2:C${last},A2:A${last},"${side}")`;
+   const avgFormula=`ROUND(SUMPRODUCT((A2:A${last}="${side}")*C2:C${last}*D2:D${last})/B${next},4)`;
+   summaries.push({row:next,label:'Exec'+verb,formula:totalFormula,value:excelSafeQuantity(qty),average:false},{row:next+1,label:'Average'+verb,formula:avgFormula,value:Number(avgText(value,qty)),average:true});next+=3;
+  }
+  return {name:symbol.slice(0,31),client,header:['B/S','Symbol','Qty','Price','Client Desc','Account','ClientId'],widths:excelWidths(template.widths,data),rows:data,summaries};
+ });
+ if(!stacked)return sheets;
+ let startRow=1;
+ const blocks=sheets.map(sheet=>{
+  const offset=startRow-1;
+  const summaries=sheet.summaries.map(summary=>({...summary,row:summary.row+offset,formula:summary.formula.replace(/([A-Z]+)(\d+)/g,(_,column,row)=>column+(Number(row)+offset))}));
+  const block={...sheet,startRow,summaries};
+  startRow=(summaries.at(-1)?.row||startRow+sheet.rows.length)+3;
+  return block;
+ });
+ return [{name:'Sheet1',client,header:sheets[0].header,widths:template.widths.map((_,col)=>Math.max(...sheets.map(sheet=>sheet.widths[col]))),rows:sheets.flatMap(sheet=>sheet.rows),summaries:blocks.flatMap(block=>block.summaries),blocks}];
+}
+function excelWidths(base,rows){return base.map((width,col)=>Math.max(width,Math.min(100,rows.reduce((max,row)=>Math.max(max,String(row[col]??'').length+3),0))));}
+function xmlText(value){return String(value??'').replace(/[\x00-\x08\x0b\x0c\x0e-\x1f]/g,'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&apos;');}
+function excelCell(address,value,style){
+ if(typeof value==='number'){if(!Number.isFinite(value))throw Error('Angka Excel tidak valid.');return `<c r="${address}" s="${style}"><v>${value}</v></c>`;}
+ return `<c r="${address}" s="${style}" t="inlineStr"><is><t xml:space="preserve">${xmlText(value)}</t></is></c>`;
+}
+function finalSheetXml(sheet){
+ const template=EXCEL_TEMPLATES[sheet.client],rowXml=[];
+ const writeRow=(values,row,styles)=>rowXml.push(`<row r="${row}" ht="20" customHeight="1">${values.map((value,col)=>excelCell(String.fromCharCode(65+col)+row,value,sheet.client==='J'&&row>1&&col===3&&Number.isInteger(value)?template.bodyStyles[2]:styles[col])).join('')}</row>`);
+ for(const block of sheet.blocks||[{...sheet,startRow:1}]){
+  writeRow(block.header,block.startRow,template.headerStyles);
+  block.rows.forEach((row,i)=>writeRow(row,block.startRow+i+1,template.bodyStyles));
+  for(const summary of block.summaries){
+   const [labelStyle,numberStyle]=summary.average?template.summaryStyles.slice(2):template.summaryStyles.slice(0,2);
+   rowXml.push(`<row r="${summary.row}" ht="20" customHeight="1">${excelCell('A'+summary.row,summary.label,labelStyle)}<c r="B${summary.row}" s="${numberStyle}"><f>${xmlText(summary.formula)}</f><v>${summary.value}</v></c></row>`);
+  }
+ }
+ const last=sheet.summaries.at(-1)?.row||sheet.rows.length+1,end=String.fromCharCode(64+sheet.header.length);
+ return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><dimension ref="A1:${end}${last}"/><sheetViews><sheetView workbookViewId="0" showGridLines="1"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/><selection pane="bottomLeft" activeCell="A2" sqref="A2"/></sheetView></sheetViews><sheetFormatPr defaultRowHeight="20"/><cols>${sheet.widths.map((width,i)=>`<col min="${i+1}" max="${i+1}" width="${width}" customWidth="1"/>`).join('')}</cols><sheetData>${rowXml.join('')}</sheetData><pageMargins left="0.7" right="0.7" top="0.75" bottom="0.75" header="0.3" footer="0.3"/></worksheet>`;
+}
+const XLSX_CRC_TABLE=Uint32Array.from({length:256},(_,i)=>{let value=i;for(let j=0;j<8;j++)value=value&1?0xedb88320^(value>>>1):value>>>1;return value>>>0;});
+function xlsxCrc(bytes){let crc=0xffffffff;for(const byte of bytes)crc=XLSX_CRC_TABLE[(crc^byte)&255]^(crc>>>8);return (crc^0xffffffff)>>>0;}
+function xlsxZip(files){
+ const encode=new TextEncoder(),chunks=[],central=[];let offset=0;
+ for(const [name,text] of files){
+  const filename=encode.encode(name),data=encode.encode(text),crc=xlsxCrc(data),header=new Uint8Array(30+filename.length),view=new DataView(header.buffer);
+  view.setUint32(0,0x04034b50,true);view.setUint16(4,20,true);view.setUint16(6,2048,true);view.setUint16(12,33,true);view.setUint32(14,crc,true);view.setUint32(18,data.length,true);view.setUint32(22,data.length,true);view.setUint16(26,filename.length,true);header.set(filename,30);chunks.push(header,data);
+  const directory=new Uint8Array(46+filename.length),dir=new DataView(directory.buffer);dir.setUint32(0,0x02014b50,true);dir.setUint16(4,20,true);dir.setUint16(6,20,true);dir.setUint16(8,2048,true);dir.setUint16(14,33,true);dir.setUint32(16,crc,true);dir.setUint32(20,data.length,true);dir.setUint32(24,data.length,true);dir.setUint16(28,filename.length,true);dir.setUint32(42,offset,true);directory.set(filename,46);central.push(directory);offset+=header.length+data.length;
+ }
+ const centralSize=central.reduce((sum,bytes)=>sum+bytes.length,0),end=new Uint8Array(22),view=new DataView(end.buffer);view.setUint32(0,0x06054b50,true);view.setUint16(8,files.length,true);view.setUint16(10,files.length,true);view.setUint32(12,centralSize,true);view.setUint32(16,offset,true);
+ const result=new Uint8Array(offset+centralSize+22);let cursor=0;for(const chunk of [...chunks,...central,end]){result.set(chunk,cursor);cursor+=chunk.length;}return result;
+}
+function finalXlsx(client,rows,options={}){
+ const sheets=finalSheets(client,rows,options),files=[];
+ files.push(['[Content_Types].xml',`<?xml version="1.0" encoding="UTF-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>${sheets.map((_,i)=>`<Override PartName="/xl/worksheets/sheet${i+1}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>`).join('')}</Types>`]);
+ files.push(['_rels/.rels','<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>']);
+ files.push(['xl/workbook.xml',`<?xml version="1.0" encoding="UTF-8"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><bookViews><workbookView/></bookViews><sheets>${sheets.map((sheet,i)=>`<sheet name="${xmlText(sheet.name)}" sheetId="${i+1}" r:id="rId${i+1}"/>`).join('')}</sheets><calcPr calcId="191029" fullCalcOnLoad="1"/></workbook>`]);
+ files.push(['xl/_rels/workbook.xml.rels',`<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">${sheets.map((_,i)=>`<Relationship Id="rId${i+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet${i+1}.xml"/>`).join('')}<Relationship Id="rId${sheets.length+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`]);
+ files.push(['xl/styles.xml',EXCEL_TEMPLATES[client].styles]);sheets.forEach((sheet,i)=>files.push([`xl/worksheets/sheet${i+1}.xml`,finalSheetXml(sheet)]));
+ return xlsxZip(files);
+}
+function refreshExportButtons(){
+ for(const tab of EXCEL_TABS){const button=$(tab.id);if(!button)continue;try{collectFinalRows(tab.id);button.disabled=false;button.title='Export seluruh snapshot pada tab ini';}catch(error){button.disabled=true;button.title=error.message;}}
+}
+function downloadFinalExcel(tab){
+ if($('client-panel-'+tab.client).hidden||$(tab.panel).hidden)return;
+ try{
+  const bytes=finalXlsx(tab.client,collectFinalRows(tab.id),{stacked:tab.id==='exportJSpot'}),blob=new Blob([bytes],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}),url=URL.createObjectURL(blob),anchor=document.createElement('a');
+  const date=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Jakarta',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  anchor.href=url;anchor.download=`Rekap_${tab.client}_${tab.type}_${date}.xlsx`;document.body.append(anchor);anchor.click();anchor.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);$(tab.message).textContent='Excel berhasil diunduh.';
+ }catch(error){$(tab.message).textContent=error.message;}
+}
+for(const tab of EXCEL_TABS)$(tab.id).addEventListener('click',()=>downloadFinalExcel(tab));
+document.addEventListener('input',refreshExportButtons);
+document.addEventListener('change',refreshExportButtons);
+refreshExportButtons();
+
+</script>
+</body>
+</html>
